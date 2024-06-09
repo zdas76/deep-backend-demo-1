@@ -42,10 +42,12 @@ const OfferedCourseSchema = new Schema<TOfferCourse>(
       type: Number,
       required: true,
     },
-    days: {
-      type: String,
-      enum: Days,
-    },
+    days: [
+      {
+        type: String,
+        enum: Days,
+      },
+    ],
     startTime: {
       type: String,
       required: true,
@@ -61,6 +63,6 @@ const OfferedCourseSchema = new Schema<TOfferCourse>(
 );
 
 export const OfferedCourse = model<TOfferCourse>(
-  "AcademicSemester",
+  "OfferedCourse",
   OfferedCourseSchema
 );
