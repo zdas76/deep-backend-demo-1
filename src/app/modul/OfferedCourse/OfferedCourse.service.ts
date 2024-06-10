@@ -1,15 +1,16 @@
+import httpStatus from "http-status";
+import AppError from "../../errors/AppError";
+import { SemesterRegistration } from "../semesterRegistration/semesterRegistration.model";
 import { TOfferCourse } from "./OfferedCourse.interface";
 import { OfferedCourse } from "./OfferedCourse.model";
 
-const createOfferedCoursedIntoDB = async (payLoad: TOfferCourse) => {
-  const {semesterRegistration, academicFaculty, academicDepartment, course, faculty}  =payLoad
-  
-  const result = await OfferedCourse.create(payLoad);
+const createOfferedCoursedIntoDB = async (PayLoad: TOfferCourse) => {
+  const result = await OfferedCourse.create(PayLoad);
   return result;
 };
 
-const getAllOfferedCoursedFromDB = async (PayLoad: Record<string, unknown>) => {
-  const result = await OfferedCourse.find(PayLoad);
+const getAllOfferedCoursedFromDB = async (payLoad: Record<string, unknown>) => {
+  const result = await OfferedCourse.find(payLoad);
   return result;
 };
 
