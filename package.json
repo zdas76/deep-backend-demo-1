@@ -1,7 +1,6 @@
 {
   "name": "practice_project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
@@ -25,5 +24,6 @@
     "http-status": "^1.7.4",
     "mongoose": "^8.4.0",
     "zod": "^3.23.8"
-  }
+  },
+  "description": ""
 }
