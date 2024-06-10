@@ -1,8 +1,10 @@
 import { TOfferCourse } from "./OfferedCourse.interface";
 import { OfferedCourse } from "./OfferedCourse.model";
 
-const createOfferedCoursedIntoDB = async (PayLoad: TOfferCourse) => {
-  const result = await OfferedCourse.create(PayLoad);
+const createOfferedCoursedIntoDB = async (payLoad: TOfferCourse) => {
+  const {semesterRegistration, academicFaculty, academicDepartment, course, faculty}  =payLoad
+  
+  const result = await OfferedCourse.create(payLoad);
   return result;
 };
 
